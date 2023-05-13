@@ -1,8 +1,8 @@
-import { MainPageComponent, ModalComponent } from '@/components';
+import { MainPageView, ModalView } from '@/views';
 
 export const MainPage = () => (
   <>
-  <MainPageComponent />
-  <ModalComponent />
+  <MainPageView />
+  <ModalView />
   </>
 );
