@@ -3,11 +3,25 @@ export const colors = {
     stripe: '#00A884',
     main: '#EAE6DF',
     deeper: '#D1D7DB',
+    default: '#FFFFFF',
   },
   panel: {
     header: '#F0F2F5',
   },
   border: {
     chat: '#D1D7DB',
+  },
+  chatlist: {
+    search: {
+      input: {
+        container: '#FFFFFF',
+      }
+    }
+  },
+  chat: {
+    body: {
+      background: '#EBE5DB',
+    },
+    footer: '#F0F2F5',
   }
 }

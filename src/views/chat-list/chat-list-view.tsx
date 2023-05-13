@@ -1,8 +1,16 @@
 import { VStack } from '@chakra-ui/react';
-import { ChatListHeaderView } from './chat-list-header/chat-list-header';
+import {
+  ChatListHeaderView,
+  ChatListSearchView,
+  ChatListBodyView,
+  ChatListMessageView
+} from '@/views/chat-list';
 
 export const ChatListView = () => (
-  <VStack spacing={0} w="full">
+  <VStack spacing={0} w="full" justify="start">
     <ChatListHeaderView />
+    <ChatListSearchView />
+    <ChatListBodyView />
+    <ChatListMessageView />
   </VStack>
 )

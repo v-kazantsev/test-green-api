@@ -1,8 +1,10 @@
-import { VStack } from '@chakra-ui/react';
-import { NavBarView } from './nav-bar/nav-bar-view';
+import { NavBarView, ChatBodyView, ChatFooterView } from '@/views/chat';
+import './chat-view.scss';
 
 export const ChatView = () => (
-  <VStack spacing={0} w="full">
+  <div className="chat-view">
     <NavBarView />
-  </VStack>
+    <ChatBodyView />
+    <ChatFooterView />
+  </div>
 )
