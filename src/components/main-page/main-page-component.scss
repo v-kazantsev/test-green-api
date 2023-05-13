@@ -1,0 +1,21 @@
+.main-page-component {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    flex-basis: 15vh;
+    width: 100%;
+    background-color: var(--chakra-colors-background-stripe);
+  }
+
+  &__main {
+    margin: 0;
+    width: 100%;
+    flex-grow: 1;
+    background-color: var(--chakra-colors-background-deeper);
+  }
+}
