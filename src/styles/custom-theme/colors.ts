@@ -15,6 +15,7 @@ export const colors = {
     search: {
       input: {
         container: '#FFFFFF',
+        background: '#F0F2F5',
       }
     },
     header: {
