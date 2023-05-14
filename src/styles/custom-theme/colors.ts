@@ -1,4 +1,7 @@
 export const colors = {
+  typography: {
+    primary: '#3B4A54',
+  },
   background: {
     stripe: '#00A884',
     main: '#EAE6DF',
@@ -20,7 +23,8 @@ export const colors = {
     },
     header: {
       avatar: '#DFE5E7',
-    }
+    },
+    border: '#E9EDEF',
   },
   chat: {
     body: {

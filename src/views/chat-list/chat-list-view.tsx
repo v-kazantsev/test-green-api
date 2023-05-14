@@ -3,7 +3,7 @@ import {
   ChatListHeaderView,
   ChatListSearchView,
   ChatListBodyView,
-  ChatListMessageView
+  
 } from '@/views/chat-list';
 
 export const ChatListView = () => (
@@ -11,6 +11,5 @@ export const ChatListView = () => (
     <ChatListHeaderView />
     <ChatListSearchView />
     <ChatListBodyView />
-    <ChatListMessageView />
   </VStack>
 )
