@@ -16,6 +16,9 @@ export const colors = {
       input: {
         container: '#FFFFFF',
       }
+    },
+    header: {
+      avatar: '#DFE5E7',
     }
   },
   chat: {
