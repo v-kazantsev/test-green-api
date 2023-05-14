@@ -1,6 +1,8 @@
 export const colors = {
   typography: {
     primary: '#3B4A54',
+    strong: '#111B21',
+    meta: '#667781',
   },
   background: {
     stripe: '#00A884',

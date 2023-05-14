@@ -1,0 +1,25 @@
+.chat-list-item-view {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--chakra-colors-background-default);
+  
+
+  &__avatar {
+    height: 50px;
+    width: 50px;
+  }
+
+  &__meta-wrapper {
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--chakra-colors-chatlist-border);
+    padding: 8px 0;
+  }
+
+  &__meta {
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -1,5 +1,13 @@
 .chat-list-body {
+  width: 100%;
   flex-grow: 1;
   background-color: var(--chakra-colors-background-default);
-  position: relative;
+  overflow-y: scroll;
+
+  &__list {
+    list-style: none;
+    padding-left: 16px;
+    padding-right: 12px;
+    max-height: 850px;
+  }
 }
