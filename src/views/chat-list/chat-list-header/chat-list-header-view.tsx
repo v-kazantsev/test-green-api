@@ -1,8 +1,9 @@
-import { HStack, Box } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
+import { HStack } from '@/ui-elements';
 import './chat-list-header.scss';
 
 export const ChatListHeaderView = () => (
-  <HStack spacing={0} w="full" className="chat-list-header">
+  <HStack className="chat-list-header">
     <Box>Avatar</Box>
     <Box></Box>
     <Box></Box>

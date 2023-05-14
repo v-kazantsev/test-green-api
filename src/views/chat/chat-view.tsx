@@ -1,10 +1,11 @@
+import { VStack } from '@/ui-elements';
 import { NavBarView, ChatBodyView, ChatFooterView } from '@/views/chat';
 import './chat-view.scss';
 
 export const ChatView = () => (
-  <div className="chat-view">
+  <VStack className="chat-view">
     <NavBarView />
     <ChatBodyView />
     <ChatFooterView />
-  </div>
+  </VStack>
 )

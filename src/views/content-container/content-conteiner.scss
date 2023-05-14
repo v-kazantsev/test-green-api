@@ -1,0 +1,11 @@
+.content-container-view {
+  min-height: 100%;
+  
+  &__chat-list {
+    flex-basis: 30%;
+  }
+
+  &__chat {
+    flex-grow: 1;
+  }
+}

@@ -1,12 +1,13 @@
-import { HStack, VStack } from '@chakra-ui/react';
 import { ChatView, ChatListView } from '@/views';
+import { HStack, VStack } from '@/ui-elements';
+import './content-conteiner.scss'
 
 export const ContentContainerView = () => (
-  <HStack spacing={0} w="full">
-    <VStack flexBasis="30%" justify="start">
+  <HStack className="content-container-view">
+    <VStack className="content-container-view__chat-list">
       <ChatListView />
     </VStack>
-    <VStack flexGrow={1} justify="start">
+    <VStack className="content-container-view__chat">
       <ChatView />
     </VStack>
   </HStack>
