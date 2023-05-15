@@ -7,10 +7,8 @@ type Props = {
 }
 
 export const AvatarView = ({ image }: Props) => {
-  return image
-  ? image
-  : (
-  <Center className="avatar-view">
-    <PersonOutline />
-  </Center>
-)};
+  return image || (
+    <Center className="avatar-view">
+      <PersonOutline />
+    </Center>
+  )};
