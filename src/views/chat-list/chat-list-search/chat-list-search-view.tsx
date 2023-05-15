@@ -3,7 +3,12 @@ import { FilterOutline, SearchOutline } from 'react-ionicons'
 import { HStack } from '@/ui-elements';
 import './chat-list-search.scss';
 
-export const ChatListSearchView = () => (
+type Props = {
+  value: string;
+  onChange: (value: string) => void;
+}
+
+export const ChatListSearchView = ({ value, onChange }: Props) => (
   <HStack className="chat-list-search">
     <InputGroup>
       <InputLeftElement>
@@ -15,8 +20,10 @@ export const ChatListSearchView = () => (
         pr="32px"
         bg="chatlist.search.input.background"
         placeholder="Поиск или новый чат"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
       />
     </InputGroup>
-    <IconButton aria-label="filter" icon={<FilterOutline />} bg="transparent" />
+    <IconButton type="submit" aria-label="filter" icon={<FilterOutline />} bg="transparent" />
   </HStack>
 );
