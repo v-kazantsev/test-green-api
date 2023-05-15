@@ -1,7 +1,7 @@
 import { apiInstance } from '@/api/api-instance';
 import { ID_INSTANCE, TOKEN_INSTANCE } from '@/config/constants';
-import { MessageRequestBody } from './types';
+import { TextMessageRequestBody, TextMessageAPI } from './types';
 
-export const TextMessageAPI = {
-  sendTextMessage: (body: MessageRequestBody) => apiInstance().post(`waInstance${ID_INSTANCE}/SendMessage/${TOKEN_INSTANCE}`, body),
+export const TextMessage: TextMessageAPI  = {
+  sendTextMessage: (body: TextMessageRequestBody) => apiInstance().post(`waInstance${ID_INSTANCE}/SendMessage/${TOKEN_INSTANCE}`, body),
 };

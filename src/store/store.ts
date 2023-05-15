@@ -1,8 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { chatlistReducers } from '@/features/chatlist/slice';
+import { chatlistReducer } from '@/features/chatlist/slice';
+import { contactsReducer } from '@/features/contacts/slice';
 
 const rootReducer = combineReducers({
-  chatlist: chatlistReducers,
+  chatlist: chatlistReducer,
+  contacts: contactsReducer
 });
 
 

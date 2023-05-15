@@ -1,11 +1,12 @@
-import { ChatView, ChatListView } from '@/views';
+import { ChatView } from '@/views';
+import { ChatListVM } from '@/view-models';
 import { HStack, VStack } from '@/ui-elements';
-import './content-conteiner.scss'
+import './content-container.scss'
 
 export const ContentContainerView = () => (
   <HStack className="content-container-view">
     <VStack className="content-container-view__chat-list">
-      <ChatListView />
+      <ChatListVM />
     </VStack>
       <ChatView />
   </HStack>

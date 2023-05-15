@@ -15,6 +15,6 @@ const slice = createSlice({
   }
 });
 
-export const chatlistReducers = slice.reducer;
+export const chatlistReducer = slice.reducer;
 export const chatlistActions = slice.actions;
 

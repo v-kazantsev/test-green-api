@@ -1,14 +1,11 @@
-import {
-  ChatListHeaderView,
-  ChatListBodyView,
-} from '@/views/chat-list';
+import { ChatListHeaderView } from '@/views/chat-list';
 import { VStack } from '@/ui-elements';
-import { ChatListSearchVM } from '@/view-models';
+import { ChatListSearchVM, ChatListBodyVM } from '@/view-models';
 
 export const ChatListView = () => (
   <VStack>
     <ChatListHeaderView />
     <ChatListSearchVM />
-    <ChatListBodyView />
+    <ChatListBodyVM />
   </VStack>
 )
