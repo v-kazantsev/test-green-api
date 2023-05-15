@@ -1,22 +1,24 @@
 import { Box, Input } from '@chakra-ui/react';
+import { AttachOutline, HappyOutline, MicOutline } from 'react-ionicons'
 import { HStack } from '@/ui-elements';
 import './chat-footer.scss';
 
 type Props = {
   value: string;
   onChange: (value: string) => void;
-  disabled?: boolean;
 }
 
-export const ChatFooterView = ({ onChange, disabled = true, ...props }: Props) => (
+export const ChatFooterView = ({ onChange, ...props }: Props) => (
   <HStack className="chat-footer-view">
-    <Box>Footer</Box>
-    <Box></Box>
+    <Box><HappyOutline color="#54656F" /></Box>
+    <Box className="chat-footer-view__attach-icon"><AttachOutline color="#54656F" /></Box>
     <Input
       name="message"
       onChange={(e) => onChange(e.target.value)}
       {...props}
+      bg="background.default"
+      placeholder="Введите сообщение"
     />
-    <button type="submit" disabled={disabled}>Send</button>
+    <Box ml={4}><MicOutline /></Box>
   </HStack>
 );

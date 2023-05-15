@@ -1,5 +1,6 @@
 .content-container-view {
   min-height: 100%;
+  align-items: flex-start;
   
   &__chat-list {
     flex-basis: 45%;

@@ -14,7 +14,9 @@ type Props = {
 
 export const NavBarView = ({ contact, visit }: Props) => (
   <HStack className="nav-bar-view">
-    <AvatarView />
+    <Box>
+      <AvatarView />
+    </Box>
     <VStack>
       <Text textStyle="h3">{contact}</Text>
       <Text>{visit}</Text>

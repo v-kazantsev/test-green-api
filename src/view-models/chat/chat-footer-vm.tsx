@@ -15,9 +15,8 @@ export const ChatFooterVM = () => {
     });
     setMessage('');
   }
-  return chatId
-  ? (<form onSubmit={handleSubmit}>
-      <ChatFooterView value={message} onChange={setMessage} disabled={!chatId || !message} />
-    </form>)
-  : null;
+  return (
+  <form onSubmit={handleSubmit}>
+    <ChatFooterView value={message} onChange={setMessage} />
+  </form>);
 }

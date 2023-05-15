@@ -16,6 +16,7 @@ export const colors = {
   border: {
     chat: '#D1D7DB',
   },
+  icon: '#54656F',
   chatlist: {
     search: {
       input: {

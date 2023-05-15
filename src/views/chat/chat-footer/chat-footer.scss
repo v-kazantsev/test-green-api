@@ -1,7 +1,13 @@
 .chat-footer-view {
   flex: none;
-  background-color: var(--chakra-colors-chat-chat-footer);
+  background-color: var(--chakra-colors-chat-footer);
   padding: 5px 16px;
   min-height: 62px;
   position: relative;
+
+  &__attach-icon {
+    transform: rotate(45deg);
+    margin-left: 8px;
+    margin-right: 8px;
+  }
 }
