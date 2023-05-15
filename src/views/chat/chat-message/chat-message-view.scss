@@ -1,0 +1,49 @@
+.chat-message-view {
+  margin-bottom: 12px;
+  max-width: 60%;
+  padding: 16px;
+  position: relative;
+}
+
+.incoming {
+  background-color: var(--chakra-colors-background-default);
+  margin-right: auto;
+  border-bottom-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-style: inset;
+    border-width: 0 24px 24px 0;
+    border-color: transparent var(--chakra-colors-background-default) transparent transparent;
+    
+  }
+}
+
+.outcoming {
+  border-bottom-left-radius: 16px;
+  border-top-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background-color: var(--chakra-colors-chat-outgoing);
+  margin-left: auto;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-style: inset;
+    border-bottom: 8px dashed transparent;
+    border-right: 8px dashed transparent;
+    border-left: 8px solid var(--chakra-colors-chat-outgoing);
+    border-top: 8px solid var(--chakra-colors-chat-outgoing);
+  }
+}

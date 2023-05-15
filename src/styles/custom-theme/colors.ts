@@ -35,5 +35,6 @@ export const colors = {
     },
     panel: '#EFEAE2',
     footer: '#F0F2F5',
+    outgoing: '#D9FDD3',
   }
 }
