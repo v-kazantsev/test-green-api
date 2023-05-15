@@ -9,7 +9,7 @@ const slice = createSlice({
   name: 'chatlist',
   initialState,
   reducers: {
-    select: (state, action: PayloadAction<number | string | undefined>) => {
+    select: (state, action: PayloadAction<string | undefined>) => {
       state.chatId = action.payload;
     }, 
   }

@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
-import { ChatlistState } from '@/features/chatlist/types';
+import { RootState } from '@/store/store';
 
-export const newsListSelector = createSelector(
-  (state: ChatlistState) => state.chatId,
+export const chatIdSelector = createSelector(
+  (state: RootState) => state.chatlist.chatId,
   (chatId) => chatId
 );
