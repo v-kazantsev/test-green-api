@@ -32,6 +32,7 @@ export const colors = {
     body: {
       background: '#EBE5DB',
     },
+    panel: '#EFEAE2',
     footer: '#F0F2F5',
   }
 }

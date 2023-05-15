@@ -1,0 +1,8 @@
+.chat-content-view {
+  border-left: 1px solid var(--chakra-colors-border);
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  height: 100%;
+  overflow-y: scroll;
+}

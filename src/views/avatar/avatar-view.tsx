@@ -1,13 +1,19 @@
-import { Center } from '@chakra-ui/react';
+import { Center, Image, Box } from '@chakra-ui/react';
 import { PersonOutline } from 'react-ionicons';
 import './avatar-view.scss';
 
 type Props = {
-  image?: React.ReactElement | JSX.Element;
+  imageUrl?: string;
 }
 
-export const AvatarView = ({ image }: Props) => {
-  return image || (
+export const AvatarView = ({ imageUrl }: Props) => {
+  return imageUrl
+  ? (
+    <Box>
+      <Image src={imageUrl} alt="аватар" />
+    </Box>
+  )
+  : (
     <Center className="avatar-view">
       <PersonOutline />
     </Center>

@@ -1,6 +1,7 @@
 .chat-footer-view {
-  flex-shrink: 0;
+  flex: none;
   background-color: var(--chakra-colors-chat-chat-footer);
   padding: 5px 16px;
-  height: 62px;
+  min-height: 62px;
+  position: relative;
 }

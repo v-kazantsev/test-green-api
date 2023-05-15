@@ -1,12 +1,26 @@
-import { HStack, VStack, Box } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
+import {
+  SearchOutline,
+  EllipsisVerticalOutline
+} from 'react-ionicons';
+import { AvatarView } from '@/views';
+import { HStack, VStack } from '@/ui-elements';
 import './nav-bar-view.scss';
 
-export const NavBarView = () => (
-  <HStack w="full" spacing ={0} className="nav-bar-view">
-    <Box>Аватар</Box>
-    <VStack spacing={0}>Название чата</VStack>
-    <Box>Search</Box>
-    <Box>Настройки</Box>
-    <Box>Drawer</Box>
+type Props = {
+  contact?: string;
+  visit?: string;
+}
+
+export const NavBarView = ({ contact, visit }: Props) => (
+  <HStack className="nav-bar-view">
+    <AvatarView />
+    <VStack>
+      <Text textStyle="h3">{contact}</Text>
+      <Text>{visit}</Text>
+    </VStack>
+    <Box mr={8}><SearchOutline /></Box>
+    <Box><EllipsisVerticalOutline /></Box>
+    <Box></Box>
   </HStack>
 );

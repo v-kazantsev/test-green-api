@@ -7,8 +7,6 @@ export const ContentContainerView = () => (
     <VStack className="content-container-view__chat-list">
       <ChatListView />
     </VStack>
-    <VStack className="content-container-view__chat">
       <ChatView />
-    </VStack>
   </HStack>
 );
