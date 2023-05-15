@@ -5,14 +5,13 @@ import {
   EllipsisVerticalOutline,
   ChatboxEllipsesOutline
 } from 'react-ionicons';
-import { HStack } from '@/ui-elements';
-import { AvatarView } from '@/views';
+import { HStack, Avatar } from '@/ui-elements';
 import './chat-list-header.scss';
 
 export const ChatListHeaderView = () => (
   <HStack className="chat-list-header">
     <Box flexGrow={1}>
-      <AvatarView />
+      <Avatar />
     </Box>
     <Center w="40px" h="40px"><PeopleOutline /></Center>
     <Center w="40px" h="40px"><SyncOutline /></Center>

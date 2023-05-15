@@ -6,7 +6,7 @@ type Props = {
   imageUrl?: string;
 }
 
-export const AvatarView = ({ imageUrl }: Props) => {
+export const Avatar = ({ imageUrl }: Props) => {
   return imageUrl
   ? (
     <Box>

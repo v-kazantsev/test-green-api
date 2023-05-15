@@ -3,8 +3,7 @@ import {
   SearchOutline,
   EllipsisVerticalOutline
 } from 'react-ionicons';
-import { AvatarView } from '@/views';
-import { HStack, VStack } from '@/ui-elements';
+import { HStack, VStack, Avatar } from '@/ui-elements';
 import './nav-bar-view.scss';
 
 type Props = {
@@ -15,7 +14,7 @@ type Props = {
 export const NavBarView = ({ contact, visit }: Props) => (
   <HStack className="nav-bar-view">
     <Box>
-      <AvatarView />
+      <Avatar />
     </Box>
     <VStack>
       <Text textStyle="h3">{contact}</Text>
