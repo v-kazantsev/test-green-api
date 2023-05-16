@@ -27,3 +27,25 @@ export type Contact = {
 export type ContactsAPI = {
   getContacts(): Promise<AxiosResponse<Array<Contact>>>,
 }
+
+export type ContactDetails = {
+  avatar: string;
+  name: string;
+  email: string;
+  category: string;
+  descrition: string;
+  products: {
+    id: string;
+  };
+  chatId: string;
+  lastSeen: string;
+  isArchive: boolean;
+  isDisappearing: boolean;
+  isMute: boolean;
+  messageExpiration: number;
+  muteExpiration: number;
+}
+
+export type ContactDetailsAPI = {
+  getContactDetails(id: string): Promise<AxiosResponse<ContactDetails>>,
+}
