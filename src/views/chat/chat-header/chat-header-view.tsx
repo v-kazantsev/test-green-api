@@ -4,21 +4,21 @@ import {
   EllipsisVerticalOutline
 } from 'react-ionicons';
 import { HStack, VStack, Avatar } from '@/ui-elements';
-import './nav-bar-view.scss';
+import './chat-header-view.scss';
+import { ContactDetails } from '@/api/types';
 
 type Props = {
-  contact?: string;
-  visit?: string;
+  contactDetails: ContactDetails;
 }
 
-export const NavBarView = ({ contact, visit }: Props) => (
-  <HStack className="nav-bar-view">
+export const ChatHeaderView = ({ contactDetails }: Props) => (
+  <HStack className="chat-header-view">
     <Box>
       <Avatar />
     </Box>
     <VStack>
-      <Text textStyle="h3">{contact}</Text>
-      <Text>{visit}</Text>
+      <Text textStyle="h3">{contactDetails?.name}</Text>
+      <Text>{contactDetails?.lastSeen}</Text>
     </VStack>
     <Box mr={8}><SearchOutline /></Box>
     <Box><EllipsisVerticalOutline /></Box>

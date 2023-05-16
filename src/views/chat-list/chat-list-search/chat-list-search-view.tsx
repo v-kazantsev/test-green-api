@@ -24,6 +24,6 @@ export const ChatListSearchView = ({ value, onChange }: Props) => (
         onChange={(e) => onChange(e.target.value)}
       />
     </InputGroup>
-    <IconButton type="submit" aria-label="filter" icon={<FilterOutline />} bg="transparent" />
+    <IconButton aria-label="filter" icon={<FilterOutline />} bg="transparent" />
   </HStack>
 );
