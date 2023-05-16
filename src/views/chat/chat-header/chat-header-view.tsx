@@ -13,15 +13,14 @@ type Props = {
 
 export const ChatHeaderView = ({ contactDetails }: Props) => (
   <HStack className="chat-header-view">
-    <Box>
-      <Avatar />
+    <Box mr={4}>
+      <Avatar imageUrl={contactDetails.avatar} />
     </Box>
     <VStack>
       <Text textStyle="h3">{contactDetails?.name}</Text>
-      <Text>{contactDetails?.lastSeen}</Text>
+      {contactDetails.lastSeen && <Box><Text mr={1}>Был(-а)</Text><Text>{contactDetails.lastSeen}</Text></Box>}
     </VStack>
     <Box mr={8}><SearchOutline /></Box>
     <Box><EllipsisVerticalOutline /></Box>
-    <Box></Box>
   </HStack>
 );

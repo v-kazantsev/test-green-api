@@ -3,4 +3,10 @@
   height: 40px;
   border-radius: 50%;
   background-color: var(--chakra-colors-chatlist-header-avatar);
+
+  &__image {
+    width: 40px;
+    height: 40px;
+    clip-path: circle();
+  }
 }

@@ -10,7 +10,7 @@ export const Avatar = ({ imageUrl }: Props) => {
   return imageUrl
   ? (
     <Box>
-      <Image src={imageUrl} alt="аватар" />
+      <Image src={imageUrl} alt="аватар" className="avatar-view__image" />
     </Box>
   )
   : (
