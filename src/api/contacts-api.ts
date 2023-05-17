@@ -1,8 +1,9 @@
 import { apiInstance } from '@/api/api-instance';
-import { ID_INSTANCE, TOKEN_INSTANCE } from '@/config/constants';
+import { store } from '@/store/store';
 import { ContactsAPI } from './types';
 
+const { credentials } = store.getState();
 
 export const Contacts: ContactsAPI  = {
-  getContacts: () => apiInstance().get(`waInstance${ID_INSTANCE}/GetContacts/${TOKEN_INSTANCE}`),
+  getContacts: () => apiInstance().get(`/GetContacts/${credentials.apiTokenInstance}`),
 };

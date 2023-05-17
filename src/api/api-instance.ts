@@ -1,9 +1,11 @@
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig } from 'axios';
 import { BASE_URL }from '@/config/constants';
+import { store } from '@/store/store';
 
 export const apiInstance = (config: Partial<AxiosRequestConfig> = {}): AxiosInstance => {
+  const { credentials } = store.getState();
   const AxiosConfig: AxiosRequestConfig = {
-    baseURL: config.baseURL ?? BASE_URL,
+    baseURL: config.baseURL ?? `${BASE_URL}${credentials.idInstance}`,
   }
 
   const axiosInstance = axios.create(AxiosConfig);
