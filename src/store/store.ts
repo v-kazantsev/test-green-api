@@ -14,12 +14,14 @@ import { chatlistReducer } from '@/features/chatlist/slice';
 import { contactsReducer } from '@/features/contacts/slice';
 import { contactReducer } from '@/features/contact/slice';
 import { notificationsReducer } from '@/features/notifications/slice';
+import { credentialsReducer } from '@/features/credentials/slice';
 
 const rootReducer = combineReducers({
   chatlist: chatlistReducer,
   contacts: contactsReducer,
   contact: contactReducer,
   notifications: notificationsReducer,
+  credentials: credentialsReducer
 });
 
 const persistConfig = {
