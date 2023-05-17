@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://api.green-api.com/waInstance';
+export const BASE_URL = 'https://api.green-api.com/';

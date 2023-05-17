@@ -2,8 +2,8 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { CredentialsState } from '@/features/credentials/types';
 
 const initialState: CredentialsState = {
-  idInstance: undefined,
-  apiTokenInstance: undefined
+  idInstance: '',
+  apiTokenInstance: ''
 };
 
 const slice = createSlice({
@@ -11,7 +11,8 @@ const slice = createSlice({
   initialState,
   reducers: {
     set: (state, action: PayloadAction<CredentialsState>) => {
-      state = action.payload
+      state.idInstance = action.payload.idInstance;
+      state.apiTokenInstance = action.payload.apiTokenInstance;
     }, 
   }
 });

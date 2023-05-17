@@ -1,4 +1,5 @@
 import { AxiosResponse } from 'axios';
+import { Credentials } from '@/types';
 
 export type ResponseError = Array<string> | string;
 
@@ -15,7 +16,7 @@ export type TextMessageRequestBody = {
 }
 
 export type TextMessageAPI = {
-  sendTextMessage(body: TextMessageRequestBody): Promise<AxiosResponse<TextMessageResponse>>,
+  sendTextMessage(body: TextMessageRequestBody, credentials: Credentials): Promise<AxiosResponse<TextMessageResponse>>,
 }
 
 export type Contact = {
@@ -25,7 +26,7 @@ export type Contact = {
 }
 
 export type ContactsAPI = {
-  getContacts(): Promise<AxiosResponse<Array<Contact>>>,
+  getContacts(credentials: Credentials): Promise<AxiosResponse<Array<Contact>>>,
 }
 
 export type ContactDetails = {
@@ -47,7 +48,7 @@ export type ContactDetails = {
 }
 
 export type ContactDetailsAPI = {
-  getContactDetails(id: string): Promise<AxiosResponse<ContactDetails>>,
+  getContactDetails(id: string, credentials: Credentials): Promise<AxiosResponse<ContactDetails>>,
 }
 
 type TextNotification = {
@@ -69,9 +70,9 @@ export type Notification = {
 }
 
 export type TextNotificationAPI = {
-  getNotification(): Promise<AxiosResponse<Notification>>,
+  getNotification(credentials: Credentials): Promise<AxiosResponse<Notification>>,
 }
 
 export type DeleteNotificationAPI = {
-  delete(id: number): Promise<AxiosResponse<{ result: boolean}>>
+  delete(id: number, credentials: Credentials): Promise<AxiosResponse<{ result: boolean}>>
 }

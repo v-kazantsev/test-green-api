@@ -1,9 +1,6 @@
 import { apiInstance } from '@/api/api-instance';
-import { store } from '@/store/store';
 import { DeleteNotificationAPI } from './types';
 
-const { credentials } = store.getState();
-
 export const DeleteNotification: DeleteNotificationAPI  = {
-  delete: (id: number) => apiInstance().delete(`/DeleteNotification/${credentials.apiTokenInstance}/${id}`),
+  delete: (id: number, credentials) => apiInstance().delete(`waInstance${credentials.idInstance}/DeleteNotification/${credentials.apiTokenInstance}/${id}`),
 };
