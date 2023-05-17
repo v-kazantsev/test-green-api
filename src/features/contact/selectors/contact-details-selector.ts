@@ -3,5 +3,5 @@ import { RootState } from '@/store/store';
 
 export const contactDetailsSelector = createSelector(
   (state: RootState) => state.contact,
-  ({ data }) => data
+  (contact) => contact
 );

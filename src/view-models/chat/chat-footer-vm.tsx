@@ -7,7 +7,7 @@ import { TextMessage } from '@/api/text-message-api';
 
 export const ChatFooterVM = () => {
   const [message, setMessage] = useState('');
-  const { chatId } = useAppSelector(contactDetailsSelector);
+  const { data: { chatId } } = useAppSelector(contactDetailsSelector);
   const credentials = useAppSelector(credentialsSelector);
   const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
