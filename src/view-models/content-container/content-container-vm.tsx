@@ -10,7 +10,7 @@ export const ContentContainerVM = () => {
   const credentials = useAppSelector(credentialsSelector);
   const [idInstance, setIdInstance] = useState('');
   const [apiTokenInstance, setApiTokenInstance] = useState('')
-  const onSubmit = (e: any) => {
+  const onSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     dispatch(credentialsActions.set({
       idInstance,
