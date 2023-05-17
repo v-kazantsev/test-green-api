@@ -49,3 +49,29 @@ export type ContactDetails = {
 export type ContactDetailsAPI = {
   getContactDetails(id: string): Promise<AxiosResponse<ContactDetails>>,
 }
+
+type TextNotification = {
+  typeMessage: string;
+  textMessageData: {
+    textMessage: string;
+    isTemplateMessage: boolean;
+  };
+  quotedMessage: {
+    stanzaId: string;
+    participant: string;
+    typeMessage: string;
+  };
+}
+
+export type Notification = {
+  receiptId: number;
+  body: TextNotification;
+}
+
+export type TextNotificationAPI = {
+  getNotification(): Promise<AxiosResponse<Notification>>,
+}
+
+export type DeleteNotificationAPI = {
+  delete(id: number): Promise<AxiosResponse<{ result: boolean}>>
+}
