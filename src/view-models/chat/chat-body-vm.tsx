@@ -13,6 +13,9 @@ export const ChatBodyVM = () => {
   const chatId = useAppSelector(activeChatSelector);
   const { notification } = useAppSelector(notificationsSelector);
   useEffect(() => {
+    if (chatId) dispatch(getChatHistory(chatId))
+  }, []);
+  useEffect(() => {
     const interval = setInterval(() => {
       dispatch(getNotification());
     }, 30000);
