@@ -3,8 +3,8 @@ import classNames from 'classnames';
 import './chat-message-view.scss';
 
 type Props = {
-  message: string;
-  type: 'incoming' | 'outcoming'
+  message?: string;
+  type: 'incoming' | 'outgoing'
 };
 
 export const ChatMessageView = ({ message, type}: Props) => (

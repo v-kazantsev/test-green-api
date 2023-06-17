@@ -1,9 +1,14 @@
 import { VStack } from '@/ui-elements'
 import { ChatContentView } from '@/views/chat';
 import './chat-body.scss';
+import { ChatMessage } from '@/api/types';
 
-export const ChatBodyView = () => (
+type Props = {
+  history: Array<ChatMessage>;
+}
+
+export const ChatBodyView = ({ history }: Props) => (
   <VStack className="chat-body-view">
-    <ChatContentView />
+    <ChatContentView history={history} />
   </VStack>
 );

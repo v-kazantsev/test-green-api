@@ -3,6 +3,7 @@ import { useAppSelector } from '@/hooks/use-app-selector';
 import { useAppDispatch } from '@/hooks/use-app-dispatch';
 import { ChatBodyView } from '@/views/chat';
 import { activeChatSelector } from '@/features/chat/selectors/active-chat-selector';
+import { chatHistorySelector } from '@/features/chat/selectors/chat-history-selector';
 import { getChatHistory } from '@/features/chat/actions/get-chat-history';
 
 export const ChatBodyVM = () => {
@@ -11,5 +12,6 @@ export const ChatBodyVM = () => {
   useEffect(() => {
     if (chatId) dispatch(getChatHistory(chatId));
   }, [chatId, dispatch])
-  return <ChatBodyView />
+  const chatHistory = useAppSelector(chatHistorySelector);
+  return <ChatBodyView history={chatHistory} />
 };
