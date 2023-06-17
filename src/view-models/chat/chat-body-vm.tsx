@@ -14,7 +14,7 @@ export const ChatBodyVM = () => {
   const { notification } = useAppSelector(notificationsSelector);
   useEffect(() => {
     if (chatId) dispatch(getChatHistory(chatId))
-  }, []);
+  }, [chatId]);
   useEffect(() => {
     const interval = setInterval(() => {
       dispatch(getNotification());
