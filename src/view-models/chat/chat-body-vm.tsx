@@ -15,7 +15,7 @@ export const ChatBodyVM = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       dispatch(getNotification());
-    }, 10000);
+    }, 30000);
     return () => clearInterval(interval);
   }, [chatId, dispatch]);
   useEffect(() => {
