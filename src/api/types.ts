@@ -34,7 +34,7 @@ export type ContactsAPI = {
 }
 
 export type ChatHistoryAPI = {
-  getChatHistory(body: { chatId: number, count?: number }, credentials: Credentials, ): Promise<AxiosResponse<Array<ChatMessage>>>,
+  getChatHistory(body: { chatId: string, count?: number }, credentials: Credentials, ): Promise<AxiosResponse<Array<ChatMessage>>>,
 }
 
 export type ChatMessage = {

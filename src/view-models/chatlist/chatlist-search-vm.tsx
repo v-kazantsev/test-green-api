@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useAppDispatch } from '@/hooks/use-app-dispatch';
 import { getContactDetails } from '@/features/contact/actions/get-contact-details';
+import { chatActions } from '@/features/chat/slice';
 import { ChatListSearchView } from '@/views/chat-list';
 
 export const ChatListSearchVM = () => {
@@ -9,6 +10,7 @@ export const ChatListSearchVM = () => {
   const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     dispatch(getContactDetails(`${chatId}@c.us`));
+    dispatch(chatActions.setActive(`${chatId}@c.us`));
   }
   return (
     <form onSubmit={handleSubmit}>
