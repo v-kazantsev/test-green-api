@@ -19,6 +19,10 @@ export type TextMessageAPI = {
   sendTextMessage(body: TextMessageRequestBody, credentials: Credentials): Promise<AxiosResponse<TextMessageResponse>>,
 }
 
+export type ChatMessageAPI = {
+  getChatMessage(body: { chatId: string, idMessage: string }, credentials: Credentials): Promise<AxiosResponse<ChatMessage>>,
+}
+
 export type Contact = {
   id: string;
   name: string;
@@ -27,6 +31,27 @@ export type Contact = {
 
 export type ContactsAPI = {
   getContacts(credentials: Credentials): Promise<AxiosResponse<Array<Contact>>>,
+}
+
+export type ChatHistoryAPI = {
+  getChatHistory(body: { chatId: number, count?: number }, credentials: Credentials, ): Promise<AxiosResponse<Array<ChatMessage>>>,
+}
+
+export type ChatMessage = {
+  type: 'incoming' | 'outgoing';
+  timestamp: number;
+  idMessage: string;
+  statusMessage?: 'pending' | 'sent' | 'delivered' | 'read';
+  typeMessage: string;
+  chatId: string;
+  senderId?: string;
+  senderName?: string;
+  textMessage?: string;
+  downloadUrl?: string;
+  caption?: string;
+  location?: unknown;
+  contact?: ContactDetails;
+  extendedTextMessage?: unknown;
 }
 
 export type ContactDetails = {
