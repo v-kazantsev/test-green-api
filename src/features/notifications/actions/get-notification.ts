@@ -9,7 +9,6 @@ export const getNotification = createAsyncThunk(
     const { credentials } = getState() as RootState;
     try {
       const { data } = await TextNotification.getNotification(credentials);
-      console.log('data', data)
       if (data) dispatch(deleteNotification(data?.receiptId))
       return data;
     } catch (error) {

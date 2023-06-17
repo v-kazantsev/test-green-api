@@ -8,7 +8,6 @@ export const getChatHistory = createAsyncThunk(
     const { credentials } = getState() as RootState;
     try {
       const { data } = await ChatHistory.getChatHistory({chatId, count: 10 }, credentials);
-      console.log('data', data)
       return data;
     } catch (error) {
       return rejectWithValue(error)

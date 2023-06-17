@@ -7,10 +7,9 @@ type Props = {
   history: Array<ChatMessage>;
 }
 
-export const ChatContentView = ({ history }: Props) => {
-  console.log('history', history)
-  return (
+export const ChatContentView = ({ history }: Props) => 
+(
   <VStack className="chat-content-view">
-    {history.map((item) => <ChatMessageView type={item.type} message={item.textMessage} />)}
+    {history.map((item) => <ChatMessageView message={item} key={item?.idMessage} />)}
   </VStack>
-)};
+);
